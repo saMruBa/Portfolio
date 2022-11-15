@@ -1,13 +1,85 @@
-body {
+/* #d41e5b - home bg
+#E44178 - img -bg
+#DD6262 - desktop
+#3F3D56 -table
+#2F2E41 - chair
+#ffc43b - light
+#ffd23e - dark
+*/
+
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #dedee7;
+  font-size: 1.6rem;
+  font-family: "aileron-regular";
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 3.8rem;
+  font-family: "existenceLight";
+}
+
+h3 {
+  font-size: 3rem;
+  font-family: "Existence-StencilLight";
+  font-weight: bold;
+}
+
+p {
+  font-family: "existenceLight";
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 58%;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@font-face {
+  font-family: "Existence-StencilLight";
+
+  src: url(../src/fonts/Existence-Light/Existence-StencilLight.otf);
+}
+@font-face {
+  font-family: "existenceLight";
+
+  src: url(../src/fonts/Existence-Light/Existence-Light.otf);
+}
+@font-face {
+  font-family: "existenceUnicase";
+  src: url(../src/fonts/Existence-Light/Existence-UnicaseLight.otf);
+}
+@font-face {
+  font-family: "aileron-regular";
+  src: url(../src/fonts/aileron/Aileron-Regular.otf);
+}
+@font-face {
+  font-family: "aileron-thin";
+  src: url(../src/fonts/aileron/Aileron-Thin.otf);
+}
+
+@font-face {
+  font-family: "great-vibe";
+  src: url(../src/fonts/great-vibes/GreatVibes-Regular.otf);
+}
+@font-face {
+  font-family: "kaushan";
+  src: url(../src/fonts//kaushan-script/KaushanScript-Regular.otf);
 }

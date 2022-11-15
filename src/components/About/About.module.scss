@@ -1,0 +1,173 @@
+.about {
+  color: #3f3d56;
+  padding: 15rem 8rem;
+  background-color: #f5d260;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  font-size: 1.8rem;
+
+  @media screen and (max-width: 1000px) {
+    padding: 5rem 3rem;
+  }
+
+  h2,
+  h3 {
+    color: #e44178;
+
+    text-align: center;
+    // align-self: center;
+    text-transform: uppercase;
+    // display: inline;
+  }
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5rem;
+
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  &-text {
+    flex: 0 1 50%;
+
+    .highlight {
+      color: #d41e5b;
+    }
+  }
+
+  &-skills {
+    padding: 0 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 9rem;
+    row-gap: 3rem;
+    color: #3f3d56;
+
+    @media screen and (max-width: 1200px) {
+      padding: 5rem 0;
+      column-gap: 5rem;
+      row-gap: 2rem;
+    }
+
+    .typescript::after {
+      content: "Typescript";
+    }
+    .html::after {
+      content: "HTML";
+    }
+    .css::after {
+      content: "CSS";
+    }
+    .react::after {
+      content: "React JS";
+    }
+    .git::after {
+      content: "GIT";
+    }
+    .github::after {
+      content: "GITHUB";
+    }
+    .sass::after {
+      content: "SASS";
+    }
+    .js::after {
+      content: "JavaScript";
+    }
+    .bs::after {
+      content: "BOOTSTRAPE";
+    }
+    .tw::after {
+      content: "TAILWIND";
+    }
+    .next::after {
+      content: "NEXT JS";
+    }
+
+    span {
+      font-size: 10rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      @media screen and (max-width: 1200) {
+        font-size: 8rem;
+      }
+
+      svg {
+        transform: scale(1);
+        transition: all 0.3s;
+      }
+
+      &::after {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        position: absolute;
+        transform: scale(0);
+        font-weight: bold;
+        font-family: "existenceLight";
+        opacity: 0;
+        color: #d41e5b;
+        top: 40%;
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        cursor: pointer;
+        svg {
+          opacity: 0;
+          transform: scale(1.4);
+        }
+
+        &::after {
+          transform: scale(1.5);
+          opacity: 1;
+        }
+      }
+    }
+
+    .typescript,
+    .github {
+      font-size: 8rem;
+      @media screen and (max-width: 1200) {
+        font-size: 6rem;
+      }
+    }
+  }
+}
+
+.custom-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 9px;
+}
+
+.custom-shape svg {
+  position: relative;
+  display: block;
+  width: calc(144% + 1.3px);
+  height: 85px;
+}
+
+.custom-shape .shape-fill {
+  // fill: #006744;
+  fill: #6c7cca;
+}
+
+.initial {
+  transform: translateY(-200px);
+  opacity: 0;
+}

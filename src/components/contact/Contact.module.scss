@@ -1,0 +1,106 @@
+.contact {
+  padding: 13rem 5rem;
+  background-color: #9658ec;
+  position: relative;
+
+  h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .form {
+    margin: auto;
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    row-gap: 1.5rem;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
+
+    input,
+    textarea {
+      border: none;
+      padding: 0.5rem;
+      font-size: 1.6rem;
+      border-radius: 0.5rem;
+
+      background-color: #6ccac279;
+      outline: none;
+      box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.2);
+      color: inherit;
+      transition: all 0.1s;
+      border: 1px solid #e44177ae;
+
+      &::placeholder {
+        color: #b4b3b3;
+      }
+
+      &:focus {
+        background-color: #e44177ae;
+        transform: scale(1.02);
+        border: 1px solid #6ccac279;
+        box-shadow: 1px 3px 7px 4px rgba(0, 0, 0, 0.3);
+      }
+    }
+    input {
+      height: 4rem;
+      flex-grow: 1;
+    }
+
+    textarea {
+      flex-basis: 100%;
+      resize: none;
+    }
+
+    button {
+      align-self: end;
+
+      color: #eee;
+      padding: 0.8rem 3rem;
+      border: none;
+      margin-top: 2rem;
+      border-radius: 0.3rem;
+      box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s;
+      background-color: #e441779a;
+      border: 2px solid #6ccac279;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-2px);
+        box-shadow: 1px 2px 7px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      &:active {
+        transform: translateY(2px);
+        box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+.custom-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 190px;
+}
+
+.custom-shape .shape-fill {
+  fill: #6c7ccab9;
+}
